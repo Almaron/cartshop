@@ -1,4 +1,27 @@
 Cartshop::Application.routes.draw do
+  get "carts/show"
+  get "carts/update"
+  get "carts/destroy"
+  get "sections/index"
+  get "sections/show"
+  get "sections/new"
+  get "sections/create"
+  get "sections/edit"
+  get "sections/update"
+  get "sections/destroy"
+  get "categories/index"
+  get "categories/show"
+  get "categories/new"
+  get "categories/create"
+  get "categories/edit"
+  get "categories/update"
+  get "categories/destroy"
+  get "items/show"
+  get "items/new"
+  get "items/create"
+  get "items/edit"
+  get "items/update"
+  get "items/destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
