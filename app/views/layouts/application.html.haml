@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %title Cartshop
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .wrapper
+      .top
+        .topbar
+          .title
+            Cartshop
+          .login
+            = render partial: 'login'
+      .message_box
+        - if flash[:alert]
+          .alert
+            = alert
+        - if flash[:notice]
+          .notice
+            = notice
+      .main
+        %h1
+          = content_for(:head) ? yield(:head) : "#{params[:controller].capitalize}##{params[:action].capitalize}"
+        .content
+          = yield

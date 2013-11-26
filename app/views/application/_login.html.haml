@@ -1,0 +1,8 @@
+- if current_user
+   .name
+      = current_user.name
+   .link
+      = link_to "Выйти", logout_path, method: :delete
+- else
+   .link
+      =link_to "Войти", login_path

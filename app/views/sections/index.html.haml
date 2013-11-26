@@ -1,0 +1,9 @@
+- content_for :head
+   Разделы
+
+.admin_buttons
+   .button
+      = link_to "Добавить раздел", new_section_path
+
+.section_list
+   = render @sections
